@@ -17,9 +17,8 @@ const FullScreenPost = () => {
   let alldata = apidata;
 
   alldata = alldata.filter((items) => data.id === items.id);
-
-  let newtweetdata = alldata;
-
+  console.log(alldata);
+  let newtweetdata = alldata[0];
   const Delete = async (item_id) => {
     const res = await fetch("/deletedata", {
       method: "POST",
@@ -32,6 +31,7 @@ const FullScreenPost = () => {
       }),
     });
     const data = await res.json();
+    // setnewData(data)
     if (res.status === 422 || !data) {
       console.log("invalid");
     } else {
@@ -147,9 +147,9 @@ const FullScreenPost = () => {
             <i
               className="fas fa-times"
               onClick={() => {
-                newtweetdata[0].email === userdata.email
+                newtweetdata.email === userdata.email
                   ? navigate("/profile")
-                  : navigate("/profile/" + newtweetdata[0].username);
+                  : navigate("/profile/" + newtweetdata.username);
               }}
               style={{ color: "white", marginTop: "1rem", marginLeft: "1rem" }}
             ></i>
@@ -189,11 +189,11 @@ const FullScreenPost = () => {
               </div>
               <div className="allicons" id="allicons">
                 <div className="alllikes" id="alllikes">
-                  {newtweetdata[0].Likes.includes(userdata.email) ? (
+                  {newtweetdata.Likes.includes(userdata.email) ? (
                     <>
                       <div
                         className="like_circle"
-                        onClick={() => unlike(newtweetdata[0].id)}
+                        onClick={() => unlike(newtweetdata.id)}
                       >
                         <i
                           className="fas fa-heart"
@@ -208,7 +208,7 @@ const FullScreenPost = () => {
                     <>
                       <div
                         className="like_circle"
-                        onClick={() => like(newtweetdata[0].id)}
+                        onClick={() => like(newtweetdata.id)}
                       >
                         <i
                           className="fas fa-heart"
@@ -217,19 +217,17 @@ const FullScreenPost = () => {
                       </div>
                     </>
                   )}
-                  {newtweetdata[0].Likes.length > 0 ? (
-                    <p className="Like_number">
-                      {newtweetdata[0].Likes.length}
-                    </p>
+                  {newtweetdata.Likes.length > 0 ? (
+                    <p className="Like_number">{newtweetdata.Likes.length}</p>
                   ) : (
                     <p className="Like_number" style={{ color: "black" }}></p>
                   )}
                 </div>
-                {userdata.bookmark.includes(newtweetdata[0].id) ? (
+                {userdata.bookmark.includes(newtweetdata.id) ? (
                   <div
                     className="like_circle"
                     style={{ marginRight: "1.5rem" }}
-                    onClick={() => UnBookmark(newtweetdata[0].id)}
+                    onClick={() => UnBookmark(newtweetdata.id)}
                   >
                     <i
                       className="fas fa-bookmark"
@@ -240,7 +238,7 @@ const FullScreenPost = () => {
                   <div
                     className="like_circle"
                     style={{ marginRight: "1.5rem" }}
-                    onClick={() => Bookmark(newtweetdata[0].id)}
+                    onClick={() => Bookmark(newtweetdata.id)}
                   >
                     <i
                       className="fas fa-bookmark"
@@ -248,10 +246,10 @@ const FullScreenPost = () => {
                     ></i>
                   </div>
                 )}
-                {newtweetdata[0].email === userdata.email ? (
+                {newtweetdata.email === userdata.email ? (
                   <div
                     className="like_circle"
-                    onClick={() => Delete(newtweetdata[0].id)}
+                    onClick={() => Delete(newtweetdata.id)}
                   >
                     <i className="fas fa-trash"></i>
                   </div>
