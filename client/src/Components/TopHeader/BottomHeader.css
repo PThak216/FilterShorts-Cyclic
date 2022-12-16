@@ -1,0 +1,96 @@
+.bottom {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    .bottom {
+        display: flex;
+        z-index: 1;
+        position: fixed;
+        bottom: 0;
+        height: 4rem;
+        /* border: 1px solid white; */
+        width: 100vw;
+        background-color: black;
+        align-items: center;
+        justify-content: space-around;
+      
+    }
+
+    #bottom .fa-home {
+        color: white;
+        font-size: 25px;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        cursor: pointer;
+    }
+
+    .home_ico {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* border: 1px solid white; */
+    }
+
+    .upload_ico {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-bottom: 3px;
+        border-radius: 10px;
+    }
+
+    .home_ico p {
+        color: white;
+        font-size: 14px;
+        margin-top: 2px;
+    }
+
+    #bottom .fa-bookmark {
+        color: white;
+        font-size: 24px;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        cursor: pointer;
+    }
+
+    #bottom .fa-plus {
+        color: black;
+        font-size: 25px;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        cursor: pointer;
+    }
+
+    #bottom .fa-users {
+        color: white;
+        font-size: 27px;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        cursor: pointer;
+    }
+
+    #bottom .avatar {
+        height: 2.2rem;
+        width: 2.2rem;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        cursor: pointer;
+        border: 1px solid white;
+    }
+
+}

@@ -1,0 +1,169 @@
+.fullscreen_main{
+    display: flex;
+    /* overflow: hidden; */
+    height: 100vh;
+    width: 100%;
+    background-color: black;;
+}
+
+.left_area{
+    display: flex;
+    width: 58rem;
+    background-color: black;
+
+}
+
+.right_area{
+    /* border: 1px solid; */
+  background:white;
+  width: 27rem;
+}
+
+
+
+.video_player{
+    /* border: 1px solid white; */
+    margin: auto;
+    width: 22.5rem;
+    height: 100vh;  
+    /* margin-top: 1rem; */
+}
+
+.video_player video {
+    height: 100%;
+    max-width: 100%;
+    display: block;
+    background-color: black;
+}
+
+.user_box{
+    /* border: 1px solid; */
+    width: 24rem;
+    margin: auto;
+    height: 10rem;
+}
+
+.allicons{
+    display: flex;
+    margin-left: 4rem;
+    margin-top: 1rem;
+    align-items: center;
+  }
+  .allicons p{
+    margin-top: 0.5rem;
+    margin-left: 0.3rem;
+  }
+
+  .fa-trash{
+    font-size: 18px;
+
+  }
+.alllikes{
+  display: flex;
+  width: 4rem;
+}
+#alllikes .like_circle{
+  height: 2.5rem;
+  width: 2.5rem;
+  }
+
+  #allicons .like_circle{
+    height: 2.5rem;
+    width: 2.5rem;
+    }
+
+@media only screen and (max-width: 800px) {
+  body {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+  }
+
+  body::-webkit-scrollbar {
+      display: none;
+  }
+
+  #left_area .fa-times{
+    display: none;
+  }
+
+
+  .fullscreen_main{
+    display: flex;
+    /* overflow: hidden; */
+    height: 100%;
+    width: 100%;
+    background-color: black;;
+}
+  .left_area{
+    display: flex;
+    width: 100vw;
+    background-color: black;
+    position: fixed;
+}
+
+.right_area{
+    /* border: 1px solid; */
+  background: none;
+  width: 5rem;
+  z-index: 1;
+  position: fixed;
+ opacity: 1;
+}
+
+
+
+.video_player{
+    /* border: 1px solid white; */
+    margin: 0rem;
+    width: 100vw;
+    height: 90vh;  
+    /* margin-top: 1rem; */
+}
+
+.video_player video {
+    height:95%;
+    max-width: 100%;
+    display: block;
+    background-color: black;
+}
+
+.user_box{
+    /* border: 1px solid; */
+    width: 5rem;
+    margin: 0rem;
+    height: 15rem;
+
+}
+
+.allicons{
+  display: flow-root;
+margin-left: 19rem;
+margin-top: 20rem;
+/* border: 1px solid black; */
+width: 3rem;
+}
+.alllikes{
+  display: flow-root;
+  width: 4rem;
+  /* border: 1px solid black; */
+  height: 1rem;
+  margin-bottom: 4rem;
+}
+
+#alllikes .like_circle{
+height: 3rem;
+width: 3rem;
+margin-bottom: 1rem;
+}
+#allicons .like_circle{
+  height: 3rem;
+  width: 3rem;
+  margin-bottom: 1.7rem;
+  }
+
+  #alllikes .Like_number{
+    margin-left: 1.2rem;
+    color: white;
+    margin-top: -1rem;
+    }
+}

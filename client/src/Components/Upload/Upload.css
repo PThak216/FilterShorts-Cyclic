@@ -1,0 +1,322 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.upload{
+    margin-top: 3.5rem;
+    position: absolute;
+    background-color: rgb(236, 236, 236);
+    width: 100%;
+    height: 91%;
+}
+
+.upload_Sec{
+    width: 50rem;
+    /* border: 1px solid; */
+    height: 30rem;
+    margin: auto;
+    margin-top: 1rem;
+    background-color: #fff;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .05);
+    border-radius: 20px;
+    padding: 2rem 0.7rem;
+}
+
+.upload_header{
+    width: 47.5rem;
+    height: 4rem;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.upload_header h3{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.upload_header p{
+    color: rgb(153, 151, 151);
+}
+
+.upload_videos{
+    display: flex;
+    /* border: 1px solid; */
+    height: 20rem;
+    padding: 1rem;
+}
+
+.upload_area{
+    border: 2px solid silver;
+    width: 13rem;
+    border-style: dashed;
+    border-radius: 20px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: column;
+    height: 22rem;
+}
+
+.upload_area h4{
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.upload_area p{
+    font-size: 13px;
+    color :rgb(122, 115, 115);
+    margin-top: 0.5rem;
+}
+
+.upload_details{
+    width: 33rem;
+    margin-left: 1.5rem;
+    height: 17rem;
+    margin-top: 0rem;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.caption{
+    /* height: 2rem; */
+    border-radius: 3px;
+    outline: none !important;
+    border: none;
+    border: 1px solid silver;
+    margin-top: 0.3rem;
+    font-size: 15px;
+    width: 33rem;   
+    resize: none;
+    overflow: hidden;
+    font-size: 17px;
+    padding: 5px 5px;
+}
+
+.label h4{
+    font-weight: 600;
+}
+
+.checkboxes{
+    display: flex;
+    margin-top: 1rem;
+    height: 2rem;
+    /* border: 1px solid; */
+    align-items: center;
+
+}
+
+.public{
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.postbtn
+{
+    width: 12rem;
+    height: 2.5rem;
+    margin-top: 1rem;
+    font-size: 17px;
+    border: none;
+    background: rgb(221, 6, 78);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#radiobtnn {
+    accent-color: rgb(221, 6, 78);
+    width: 17px;
+    height: 17px;
+}
+
+#radiobtn
+ {
+    accent-color: rgb(221, 6, 78);
+    width: 17px;
+    height: 17px;
+}
+
+.discard{
+    width: 12rem;
+    height: 2.5rem;
+    margin-top: 1rem;
+    font-size: 17px;
+    border: none;
+    background: rgb(221, 6, 78);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 1rem; 
+}
+
+.videopre{
+height: 22rem;
+width: 13rem;
+max-width: 13rem;
+
+}
+
+.videopre video{
+    height: 100%;
+    max-width: 100%;
+    display: block;
+    border-radius: 20px;
+    background-color: black;
+}
+
+.categories{
+    margin-top: 1rem;
+    display: flex;
+    height: 3rem;
+    align-items: center;
+}
+
+.select{
+    color: white;
+    background-color: rgb(221, 6, 78);
+    width: 6rem;
+    height: 2rem;
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+    padding-left: 5px;
+    margin-left: 0.5rem;
+}
+
+.labelcat h3{
+font-weight: 500;
+}
+
+.option{
+    border: none;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    .upload{
+        margin-top: 2.5rem;
+        position: absolute;
+        background-color: white;
+        width: 100vw;
+        height: 100vh;
+        overflow: scroll;
+       
+    }
+    
+    .upload_Sec{
+        width: 95vw;
+        /* border: 1px solid; */
+        height: 100%;
+        margin: auto;
+        margin-top: 0rem;
+        background-color: #fff;
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .05);
+        border-radius: 0px;
+        padding: 2rem 0.5rem;
+        margin-bottom: 5rem;
+    }
+    
+    .upload_header{
+        width: 95vw;
+        height: 4rem;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .upload_videos{
+        display: flex;
+        /* border: 1px solid; */
+        height: 100vh;
+        padding: 0rem;
+        flex-direction: column;
+        /* border: 1px solid; */
+        /* overflow-y: scroll; */
+        width: 95vw;
+      
+    }
+    
+    .upload_area{
+        border: 2px solid silver;
+        width: 94vw;
+        border-style: dashed;
+        border-radius: 20px;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        flex-direction: column;
+        height: 20rem;
+       
+
+    }
+    
+    .upload_details{
+        width: 95vw;
+        margin-left: 0rem;
+        height: 17rem;
+        margin-top: 1rem;
+       
+    }
+    .caption{
+        /* height: 2rem; */
+        border-radius: 3px;
+        outline: none !important;
+        border: none;
+        border: 1px solid silver;
+        margin-top: 0.3rem;
+        font-size: 15px;
+        width: 92vw;   
+        resize: none;
+        overflow: hidden;
+        font-size: 17px;
+        padding: 5px 5px;
+    }
+    .videopre{
+        height: 22rem;
+        width: 13rem;
+        max-width: 13rem;
+        /* border: 1px solid; */
+        margin: 0rem auto;
+        } 
+        
+.postbtn
+{
+    width: 15rem;
+    height: 2.7rem;
+    margin-top: 1rem;
+    font-size: 19px;
+    border: none;
+    background: rgb(221, 6, 78);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+
+.discard{
+    width: 15rem;
+    height: 2.7rem;
+    margin-top: 1rem;
+    font-size: 17px;
+    border: none;
+    background: rgb(221, 6, 78);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 0rem; 
+    /* margin-bottom: 2rem; */
+}     
+}

@@ -1,0 +1,147 @@
+.sideheader{
+    margin-top: 3.5rem;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .05);
+    height: 100vh;
+    width: 25rem;
+    position: fixed;
+}
+
+/* .sideheader p{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+} */
+
+.marginp{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.main_sheader{
+    text-decoration: none;
+    outline: none !important;
+    list-style-type: none;
+    margin-top: 2rem;
+    width: 17.5rem;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 7rem;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 86vh;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* border: 1px solid; */
+    }
+
+.fa-home{
+    font-size: 25px;
+    margin-right: 1rem;
+    color: rgb(221, 6, 78);
+}
+
+.for_you{
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 1.3rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+
+
+.fa-user-friends{
+    font-size: 22px;
+    margin-right: 1rem; 
+    color: rgb(221, 6, 78);
+}
+
+.main_sheaderli{
+    border-bottom: 1px solid rgb(236, 236, 236);
+}
+
+.topics{
+font-size: 20px;
+margin-bottom: 1rem;
+margin-left: 0.5rem;
+cursor: pointer;
+}
+.topicsli{
+    border-bottom: 1px solid rgb(236, 236, 236);
+}
+
+  .fa-laugh{
+    font-size: 22px;
+    margin-right: 1rem;
+    color: rgb(221, 6, 78);
+  }
+
+  .fa-utensils{
+    font-size: 22px;
+    margin-right: 1.2rem;
+    color: rgb(221, 6, 78);
+
+  }
+  .fa-paw{
+    font-size: 22px;
+    margin-right: 1rem;
+    color: rgb(221, 6, 78);
+  }
+  .fa-heart{
+    font-size: 22px;
+    margin-right: 1rem;
+    color: rgb(221, 6, 78);
+  }
+  .fa-biohazard{
+    font-size: 22px;
+    margin-right: 0.8rem;
+    color: rgb(221, 6, 78);
+  }
+  .fa-gamepad{
+    font-size: 20px;
+    margin-right: 0.7rem;
+    color: rgb(221, 6, 78);
+  }
+  .fa-baseball-ball {
+    font-size: 22px;
+    margin-right: 1rem;
+    color: rgb(221, 6, 78);
+  }
+
+.accounts{
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    /* border: 1px solid; */
+}
+.accounts h4{
+    font-weight: 600;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.accounts_main{
+    /* border: 1px solid; */
+    height: 6rem;
+    
+   
+}
+.see_all{
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+  }
+
+  body::-webkit-scrollbar {
+      display: none;
+  }
+  .sideheader{
+      display: none;
+
+      }
+}

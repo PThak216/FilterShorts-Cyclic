@@ -1,0 +1,243 @@
+.profile_main {
+  margin-top: 5.5rem;
+  position: fixed;
+  margin-left: 20rem;
+  width: 63rem;
+  background-color: white;
+}
+
+.profile {
+  margin: auto;
+  height: 35rem;
+  width: 30.4rem;
+  overflow-y: scroll;
+  /* border: 1px solid;   */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.profiledetails {
+  display: flex;
+  height: 10rem;
+  /* border: 1px solid; */
+  align-items: center;
+}
+
+.profileavatar {
+  width: 7rem;
+  height: 7rem;
+  background-color: pink;
+  border-radius: 100px;
+}
+
+.profilename {
+  /* border: 1px solid; */
+  height: 7rem;
+  width: 15rem;
+  margin-left: 1rem;
+}
+
+.profilename h1 {
+  font-weight: 600;
+}
+
+.profilename h4 {
+  font-weight: 500;
+}
+
+.followinfo {
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.followinfo p {
+  margin-right: 1rem;
+  margin-left: 0.5rem;
+  font-size: 15px;
+  display: flex;
+  font-size: 17px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.followinfo p:hover {
+  border-bottom: 1px solid;
+  cursor: pointer;
+}
+
+.profileinfo {
+  height: 14rem;
+  border-bottom: 2px solid #e6e6e6;
+}
+
+.profile_videos {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-top: 2px; */
+}
+
+.prof_video {
+  height: 14.5rem;
+  border: 1px solid white;
+  width: 10rem;
+  cursor: pointer;
+}
+
+.prof_video video {
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  background-color: black;
+}
+
+.profilebtn {
+  width: 7rem;
+  margin-top: 0.7rem;
+  height: 2rem;
+  border: none;
+  background-color: rgb(221, 6, 78);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.logoutbtn {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  .profile_main {
+    margin-top: 0.5rem;
+    position: fixed;
+    margin-left: 0rem;
+    width: 100vw;
+    background-color: white;
+  }
+
+  .profile {
+    margin: auto;
+    height: 39rem;
+    width: 100vw;
+    overflow-y: scroll;
+    /* border: 1px solid;   */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .profiledetails {
+    display: flex;
+    height: 10rem;
+    /* border: 1px solid; */
+    align-items: center;
+  }
+
+  .profileavatar {
+    width: 7rem;
+    height: 7rem;
+    background-color: pink;
+    border-radius: 100px;
+  }
+
+  .profilename {
+    /* border: 1px solid; */
+    height: 7rem;
+    width: 15rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .profilename h1 {
+    font-weight: 600;
+  }
+
+  .profilename h4 {
+    font-weight: 500;
+  }
+
+  .followinfo {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  .followinfo p {
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+    font-size: 15px;
+    display: flex;
+    font-size: 17px;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+
+  .followinfo p:hover {
+    border-bottom: 1px solid;
+    cursor: pointer;
+  }
+
+  .prof_video {
+    height: 14rem;
+    border: 1px solid white;
+    width: 7.3rem;
+    cursor: pointer;
+  }
+  .profileinfo {
+    height: 14rem;
+    border-bottom: 2px solid #e6e6e6;
+    margin-left: 0.5rem;
+  }
+
+  .profilebtn {
+    width: 6rem;
+    margin-top: 0.7rem;
+    height: 2rem;
+    border: none;
+    background-color: rgb(221, 6, 78);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  .logoutbtn {
+    display: flex;
+    width: 6rem;
+    margin-top: 0.7rem;
+    height: 2rem;
+    background-color: rgb(221, 6, 78);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5rem;
+  }
+
+  .allbtn {
+    display: flex;
+  }
+}

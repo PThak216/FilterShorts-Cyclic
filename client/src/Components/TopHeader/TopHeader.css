@@ -1,0 +1,83 @@
+.topheader {
+  display: flex;
+  height: 3.5rem;
+  width: 100%;
+  position: fixed;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+}
+
+.logo {
+  margin-left: 0rem;
+}
+.logo h1 {
+  font-weight: 650;
+  cursor: pointer;
+}
+.search_section {
+  /* border: 1px solid silver; */
+  height: 2.3rem;
+  width: 22rem;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  background-color: #e9e9ed;
+}
+
+.search_bar1 {
+  display: flex;
+  height: 30px;
+  width: 20rem;
+  border: none;
+  outline: none !important;
+  justify-content: center;
+  margin-left: 5px;
+  background-color: #e9e9ed;
+  border-radius: 30px;
+}
+
+.search_bar1 input text {
+  padding: 0px 3px;
+}
+
+.avatar {
+  width: 40px;
+  background-color: blanchedalmond;
+  height: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: 2rem;
+}
+.fa-cloud-upload-alt {
+  color: black;
+  font-size: 25px;
+  cursor: pointer;
+  color: rgb(221, 6, 78);
+}
+
+.header_icons {
+  display: flex;
+  align-items: center;
+}
+
+.header_icons h3 {
+  margin-left: 2rem;
+  font-weight: 550;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  .topheader {
+    display: none;
+  }
+}

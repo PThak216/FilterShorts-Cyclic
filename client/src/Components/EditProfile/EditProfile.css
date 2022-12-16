@@ -1,0 +1,141 @@
+.edit_main{
+    margin-top: 5.5rem;
+    position: fixed;
+    margin-left: 20rem;
+    width: 63rem;
+    background-color: white;
+    /* border: 1px solid; */
+    height: 34rem;
+}
+
+.edit{
+    margin: auto;
+    height: 33rem;
+    width: 30.4rem;
+    /* border: 1px solid; */
+}
+
+.edit_header{
+    /* border: 1px solid; */
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.edit_header h2{
+    font-weight: 500;
+}
+
+.fa-times{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.save_button{
+
+    border: none;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 20px;
+     font-weight: 700;
+     font-size: 15px;
+     cursor: pointer;
+     color: white;
+     background-color: rgb(221, 6, 78);
+}
+
+.profile_pic{
+    /* border: 1px solid; */
+    height: 15rem;
+    width: 15rem;
+    border-radius: 135px;
+    margin: 25px auto;
+    cursor: pointer;
+}
+
+.profie_update{
+    /* border: 1px solid; */
+    height: 11rem;
+    margin: auto;
+    width: 30rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+   
+}
+
+.profile_pic_center{
+    display: flex;
+}
+
+.warning{
+    text-align: center;
+    color: rgb(116, 116, 116);
+}
+
+.regi_input_profile{
+    outline: none !important;
+    background-color: white;
+    width: 30rem;
+    height: 2rem;
+    border: none;   
+    font-size: 30px;
+    border-bottom: 2px solid rgb(221, 6, 78);
+    color: black;
+    padding-bottom: 10px;
+    }
+
+    @media only screen and (max-width: 800px) {
+        body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        .edit_main{
+            margin-top: 1rem;
+            position: fixed;
+            margin-left: 0.5rem;
+            width: 95vw;
+            background-color: white;
+            /* border: 1px solid; */
+            height: 100vh;
+        }
+        
+        .edit{
+            margin: auto;
+            height: 100vh;
+            width: 96vw;
+            /* border: 1px solid; */
+        }
+
+        .regi_input_profile{
+            outline: none !important;
+            background-color: white;
+            width: 95vw;
+            height: 2rem;
+            border: none;   
+            font-size: 30px;
+            border-bottom: 2px solid rgb(221, 6, 78);
+            color: black;
+            padding-bottom: 10px;
+            }
+
+            .edit_header{
+                /* border: 1px solid; */
+                height: 2rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+            }
+            .edit_header h2{
+                font-weight: 500;
+                margin-left: 1rem;
+                margin-right: 7rem;
+            }
+    }
