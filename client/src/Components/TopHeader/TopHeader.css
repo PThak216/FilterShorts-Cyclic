@@ -68,6 +68,12 @@
   cursor: pointer;
 }
 
+.fa-user {
+  margin-left: 2.2rem;
+  font-size: 23px;
+  color: rgb(221, 6, 78);
+  cursor: pointer;
+}
 @media only screen and (max-width: 800px) {
   body {
     -ms-overflow-style: none;

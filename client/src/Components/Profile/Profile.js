@@ -3,19 +3,33 @@ import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
 import "./Profile.css";
-import { Postdetails } from "../../Context/FetchData";
 import HoverVideoPlayer from "react-hover-video-player";
 
 const Profile = () => {
   const navigate = useNavigate();
   const [userdata, setuserdata] = useState([]);
-  const { apidata, newData } = Postdetails();
+  const [apidata, setApidata] = useState([]);
 
   let alldata = apidata;
   if (apidata) {
     alldata = alldata.filter((items) => items.email === userdata.email);
   }
   let newapidata = alldata;
+
+  useEffect(() => {
+    const FetchPosts = async () => {
+      const res = await fetch("/allposts", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      var data = await res.json();
+      setApidata(data);
+    };
+    FetchPosts();
+  }, []);
 
   useEffect(() => {
     const Callmainpage = async () => {
@@ -42,7 +56,7 @@ const Profile = () => {
     };
     Callmainpage();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [newData]);
+  }, []);
 
   return (
     <>

@@ -29,8 +29,6 @@ import Logout from "../LoginRegi/Logout";
 const Home = () => {
   return (
     <>
-      {/* <Router> */}
-
       <TopHeader />
       <BottomHeader />
       <Routes>
@@ -60,7 +58,6 @@ const Home = () => {
       </Routes>
       <SideHeader />
 
-      {/* </Router> */}
       <ToastContainer
         position="top-center"
         autoClose={500}

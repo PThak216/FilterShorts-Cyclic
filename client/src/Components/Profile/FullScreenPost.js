@@ -32,7 +32,6 @@ const FullScreenPost = () => {
       }),
     });
     const data = await res.json();
-    // setnewData(data)
     if (res.status === 422 || !data) {
       console.log("invalid");
     } else {

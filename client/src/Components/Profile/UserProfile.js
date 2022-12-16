@@ -10,9 +10,26 @@ import HoverVideoPlayer from "react-hover-video-player";
 const UserProfile = () => {
   const navigate = useNavigate();
   const [userdata, setuserdata] = useState([]);
-  const { apidata, dispatch, newData } = Postdetails();
+  const { dispatch } = Postdetails();
   const { username } = useParams();
   const [userProfileDetails, setUserProfileDetails] = useState([]);
+  const [apidata, setApidata] = useState([]);
+
+  useEffect(() => {
+    const FetchPosts = async () => {
+      const res = await fetch("/allposts", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      var data = await res.json();
+      setApidata(data);
+    };
+    FetchPosts();
+  }, []);
+
   useEffect(() => {
     const Callmainpage = async () => {
       try {
@@ -38,7 +55,7 @@ const UserProfile = () => {
     };
     Callmainpage();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [newData]);
+  }, []);
 
   useEffect(() => {
     const FetchProfile = async () => {
@@ -54,7 +71,31 @@ const UserProfile = () => {
       setUserProfileDetails(data.user);
     };
     FetchProfile();
-  }, [newData]);
+  }, []);
+
+  const follow = (username) => {
+    let follow = {
+      ...userdata,
+      following: [...userdata.following, username],
+    };
+    setuserdata(follow);
+    dispatch({
+      type: "FOLLOW",
+      payload: username,
+    });
+  };
+
+  const unfollow = (username) => {
+    let unfollow = {
+      ...userdata,
+      following: [...userdata.following.filter((item) => item !== username)],
+    };
+    setuserdata(unfollow);
+    dispatch({
+      type: "UNFOLLOW",
+      payload: username,
+    });
+  };
 
   let alldata = apidata;
   if (apidata) {
@@ -87,29 +128,18 @@ const UserProfile = () => {
                   {userdata.following.includes(username) ? (
                     <button
                       className="profilebtn"
-                      onClick={() =>
-                        dispatch({
-                          type: "UNFOLLOW",
-                          payload: username,
-                        })
-                      }
+                      onClick={() => unfollow(username)}
                     >
                       Unfollow
                     </button>
                   ) : (
                     <button
                       className="profilebtn"
-                      onClick={() =>
-                        dispatch({
-                          type: "FOLLOW",
-                          payload: username,
-                        })
-                      }
+                      onClick={() => follow(username)}
                     >
                       Follow
                     </button>
                   )}
-                  {/* <button className='profilebtn'>Follow</button> */}
                 </div>
               </div>
               <div className="followinfo">
